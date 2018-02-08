@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd"
+    default-autowire="byName">
+	
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		
+		<property name="username" value="zabbix@inveno.cn" />
+		<property name="password" value="ABC123" />
+		<property name="host" value="smtp.exmail.qq.com" />
+		<!--
+		<property name="port" value=${mail.port} />
+		-->
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+				<prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>
+			</props>
+		</property>
+	</bean>
+	
+<!--
+	<bean id="mailAlarm" class="com.taobao.zeus.broadcast.alarm.MailAlarm">
+		<property name="mailSender" ref="mailSender" />
+	</bean>
+	<bean id="smsAlarm" class="com.taobao.zeus.broadcast.alarm.SMSAlarm" />
+-->
+	<bean id="mailAlarm" class="com.taobao.zeus.broadcast.alarm.MailAlarm" />	
+	<bean id="smsAlarm" class="com.taobao.zeus.broadcast.alarm.SMSAlarm" >
+		<property name="postUrl" value="http://119.145.9.12/sendSMS.action" />
+		<property name="loginName" value="admin" />
+		<property name="enterpriseID" value="16279" />
+		<property name="password" value="6f5287ace236bae06925b82ce6597ed0" />
+	</bean>	
+	<bean id="zkResultNotify" class="com.taobao.zeus.broadcast.notify.ZKResultNotify" >
+		<property name="host" value="${zeus.zookeeper.host}" />
+	</bean>
+
+
+</beans>

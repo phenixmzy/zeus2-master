@@ -1,0 +1,94 @@
+2015-12-16 22:34:46,353 - Log4JLogChute initialized using file 'velocity.log'
+2015-12-16 22:34:46,353 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2015-12-16 22:34:46,353 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2015-12-16 22:34:46,353 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2015-12-16 22:34:46,353 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at com.taobao.zeus.jobs.RenderHierarchyProperties.<clinit>(RenderHierarchyProperties.java:28)
+	at com.taobao.zeus.util.JobUtils.createJob(JobUtils.java:115)
+	at com.taobao.zeus.socket.worker.reqresp.WorkerBeExecute$1.call(WorkerBeExecute.java:72)
+	at com.taobao.zeus.socket.worker.reqresp.WorkerBeExecute$1.call(WorkerBeExecute.java:54)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1854)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1703)
+	... 18 more
+2015-12-16 22:34:46,354 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2015-12-16 22:34:46,354 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2015-12-16 22:34:46,356 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2015-12-16 22:34:46,359 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2015-12-16 22:34:46,360 - Do unicode file recognition:  false
+2015-12-16 22:34:46,361 - FileResourceLoader : adding path '.'
+2015-12-16 22:34:46,365 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2015-12-16 22:34:46,366 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2015-12-16 22:34:46,367 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2015-12-16 22:34:46,369 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2015-12-16 22:34:46,370 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2015-12-16 22:34:46,371 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2015-12-16 22:34:46,400 - Created '20' parsers.
+2015-12-16 22:34:46,407 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2015-12-16 22:34:46,408 - Velocimacro : Default library not found.
+2015-12-16 22:34:46,408 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2015-12-16 22:34:46,408 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2015-12-16 22:34:46,408 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2015-12-16 22:34:46,408 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2016-02-22 17:38:00,640 - Log4JLogChute initialized using file 'velocity.log'
+2016-02-22 17:38:00,640 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2016-02-22 17:38:00,640 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2016-02-22 17:38:00,640 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2016-02-22 17:38:00,641 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:270)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at com.taobao.zeus.jobs.RenderHierarchyProperties.<clinit>(RenderHierarchyProperties.java:28)
+	at com.taobao.zeus.util.JobUtils.createJob(JobUtils.java:115)
+	at com.taobao.zeus.socket.worker.reqresp.WorkerBeExecute$4.call(WorkerBeExecute.java:256)
+	at com.taobao.zeus.socket.worker.reqresp.WorkerBeExecute$4.call(WorkerBeExecute.java:238)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1854)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1703)
+	... 18 more
+2016-02-22 17:38:00,642 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-02-22 17:38:00,642 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2016-02-22 17:38:00,644 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2016-02-22 17:38:00,647 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2016-02-22 17:38:00,648 - Do unicode file recognition:  false
+2016-02-22 17:38:00,648 - FileResourceLoader : adding path '.'
+2016-02-22 17:38:00,652 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2016-02-22 17:38:00,653 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2016-02-22 17:38:00,654 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2016-02-22 17:38:00,655 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2016-02-22 17:38:00,656 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2016-02-22 17:38:00,657 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2016-02-22 17:38:00,682 - Created '20' parsers.
+2016-02-22 17:38:00,689 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2016-02-22 17:38:00,689 - Velocimacro : Default library not found.
+2016-02-22 17:38:00,689 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2016-02-22 17:38:00,689 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2016-02-22 17:38:00,689 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2016-02-22 17:38:00,690 - Velocimacro : autoload off : VM system will not automatically reload global library macros
